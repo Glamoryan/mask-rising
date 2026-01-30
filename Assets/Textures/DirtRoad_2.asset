@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Isometric Diamond
+  m_Name: DirtRoad_2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 3625043607559282579, guid: 7bb439fb7ec8040a1ac0ff6d7d651cba, type: 3}
-  m_Color: {r: 0.4433962, g: 0.34088615, b: 0.30744925, a: 1}
+  m_Sprite: {fileID: -2230126096400507016, guid: 14662863f032a40dfa71323e59dfa32e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
     e01: 0
