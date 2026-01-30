@@ -7832,13 +7832,17 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3045738973521795376, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7308212436548966083, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8871327952967755161, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
       propertyPath: moveSpeed
-      value: 20
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8073700428697172889, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
