@@ -1,0 +1,10 @@
+# Code Owners for Mask Rising
+# These owners will be automatically requested for review when someone opens a pull request.
+
+# Global rule - @Glamoryan owns everything
+* @Glamoryan
+
+# Specific Unity directories
+/Assets/ @Glamoryan
+/ProjectSettings/ @Glamoryan
+/Packages/ @Glamoryan
