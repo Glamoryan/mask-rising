@@ -235,3 +235,7 @@ MonoBehaviour:
   showDamageDebug: 0
   despawnDelay: 2
   dropLoot: 0
+  soulPrefab: {fileID: 2668638159054968296, guid: 940b25f124a9d4f55a97088e4166f247, type: 3}
+  dropSoul: 1
+  minSouls: 1
+  maxSouls: 3
