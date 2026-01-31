@@ -7657,6 +7657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619394802}
   - component: {fileID: 619394801}
+  - component: {fileID: 619394803}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -7725,12 +7726,55 @@ Transform:
   m_GameObject: {fileID: 619394800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.86, y: -2.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619394803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619394800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e9ec9cec34447a8b63ea21a39f3dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cycle: {fileID: 1035913512}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0.06666667, b: 0.43529412, a: 1}
+    key1: {r: 0.764151, g: 0.5918429, b: 0.24150053, a: 1}
+    key2: {r: 0.8490566, g: 0.78319687, b: 0.7008722, a: 0}
+    key3: {r: 0.7924528, g: 0.53675824, b: 0.16073336, a: 0}
+    key4: {r: 0.8018868, g: 0.25791818, b: 0.13238695, a: 0}
+    key5: {r: 0, g: 0.06666667, b: 0.43529412, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 26021
+    ctime2: 31804
+    ctime3: 37394
+    ctime4: 49922
+    ctime5: 65535
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 6
+    m_NumAlphaKeys: 2
 --- !u!1 &792309997
 GameObject:
   m_ObjectHideFlags: 0
@@ -7988,7 +8032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9637fe7a838b84809a11de6d09a725c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cycle: {fileID: 1035913510}
+  cycle: {fileID: 0}
   label: {fileID: 1009214078}
 --- !u!1 &1035913509
 GameObject:
@@ -7999,7 +8043,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1035913511}
-  - component: {fileID: 1035913510}
   - component: {fileID: 1035913512}
   m_Layer: 0
   m_Name: GameManager
@@ -8008,22 +8051,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1035913510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035913509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e62a256de6ee4cba99231f22864f900, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dayDuration: 45
-  nightDuration: 45
-  phase: 0
-  dayIndex: 1
 --- !u!4 &1035913511
 Transform:
   m_ObjectHideFlags: 0
@@ -8048,13 +8075,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1035913509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 692fba6ab0e44459bb50aa94dd9346c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e62a256de6ee4cba99231f22864f900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cycle: {fileID: 1035913510}
-  dayColor: {r: 1, g: 1, b: 1, a: 1}
-  nightColor: {r: 0.65, g: 0.7, b: 1, a: 1}
-  worldRoot: {fileID: 1712741387}
+  dayDuration: 45
+  nightDuration: 45
+  startingPhase: 0
+  startingDayIndex: 1
+  phase: 0
+  dayIndex: 1
 --- !u!1 &1080038632
 GameObject:
   m_ObjectHideFlags: 0
@@ -8222,11 +8251,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2357636834017029378, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.08366744
+      value: 1.69
       objectReference: {fileID: 0}
     - target: {fileID: 2357636834017029378, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.292955
+      value: -1.46
       objectReference: {fileID: 0}
     - target: {fileID: 2357636834017029378, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
       propertyPath: m_LocalPosition.z
