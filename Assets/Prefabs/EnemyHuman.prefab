@@ -201,6 +201,18 @@ MonoBehaviour:
   target: {fileID: 0}
   visual: {fileID: 0}
   moveSpeed: 1.5
-  detectRange: 3
-  stopRange: 1.4
+  patrolSpeed: 1.5
+  detectionRange: 6
+  attackRange: 1.5
+  loseTargetDistance: 8
+  patrolMode: 0
+  patrolWaypoints: []
+  waypointReachDistance: 0.5
+  waypointWaitTime: 2
+  loopWaypoints: 1
+  wanderRadius: 5
+  wanderChangeInterval: 3
   attackCooldown: 1
+  attackDamage: 4
+  showDebugGizmos: 1
+  logStateChanges: 0
