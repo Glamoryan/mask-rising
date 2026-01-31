@@ -17,10 +17,6 @@ public class PlayerController2D : MonoBehaviour
     {
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (input.sqrMagnitude > 1f) input.Normalize();
-        
-        // Debug - Geçici olarak input kontrolü
-        if (input.magnitude > 0)
-            Debug.Log($"Input: {input}, Position: {rb.position}");
     }
 
     private void FixedUpdate()
