@@ -20,6 +20,12 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private float despawnDelay = 2f;
     [SerializeField] private bool dropLoot = false;
     
+    [Header("Soul Drop")]
+    [SerializeField] private GameObject soulPrefab;
+    [SerializeField] private bool dropSoul = true;
+    [SerializeField] private int minSouls = 1;
+    [SerializeField] private int maxSouls = 3;
+    
     #endregion
     
     #region Events
@@ -114,6 +120,12 @@ public class EnemyHealth : MonoBehaviour
         
         OnDeath?.Invoke();
         
+        // Drop souls
+        if (dropSoul && soulPrefab)
+        {
+            DropSouls();
+        }
+        
         // Disable AI
         var ai = GetComponent<EnemyHumanAI>();
         if (ai) ai.enabled = false;
@@ -128,6 +140,20 @@ public class EnemyHealth : MonoBehaviour
         
         // Destroy after delay
         Destroy(gameObject, despawnDelay);
+    }
+    
+    private void DropSouls()
+    {
+        int soulCount = UnityEngine.Random.Range(minSouls, maxSouls + 1);
+        
+        for (int i = 0; i < soulCount; i++)
+        {
+            Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * 0.5f;
+            Vector3 spawnPos = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0);
+            Instantiate(soulPrefab, spawnPos, Quaternion.identity);
+        }
+        
+        Debug.Log($"[{name}] Dropped {soulCount} souls");
     }
     
     #endregion
