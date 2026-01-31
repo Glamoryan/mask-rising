@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerController2D : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float sprintMultiplier = 2f; // Koşma hız çarpanı
     [SerializeField] private bool facingRight = false; // Model başlangıçta sola bakıyorsa false
 
     private Rigidbody2D rb;
@@ -11,6 +12,8 @@ public class PlayerController2D : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Vector2 input;
     private bool isMoving;
+    private bool isRunning; // Normal hareket (sprint değil)
+    private bool isSprinting;
     private bool needsFlip = false; // Flip gerekiyor mu?
 
     private void Awake()
@@ -41,8 +44,12 @@ public class PlayerController2D : MonoBehaviour
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (input.sqrMagnitude > 1f) input.Normalize();
         
+        // Sprint kontrolü (Shift tuşu)
+        isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        
         // Hareket durumunu kontrol et
         isMoving = input.magnitude > 0.01f;
+        isRunning = isMoving && !isSprinting; // Normal hareket (sprint değil)
         
         // Sprite yönünü hareket yönüne göre çevir
         if (input.x != 0)
@@ -60,7 +67,9 @@ public class PlayerController2D : MonoBehaviour
         if (animator != null)
         {
             animator.SetBool("IsMoving", isMoving);
-            animator.SetFloat("Speed", input.magnitude);
+            animator.SetBool("IsRunning", isRunning);
+            animator.SetBool("IsSprinting", isSprinting && isMoving);
+            animator.SetFloat("Speed", input.magnitude * (isSprinting ? sprintMultiplier : 1f));
             
             // Alternatif: Animator'ı tamamen aç/kapat
             // animator.enabled = isMoving; // Bu satırı kullanırsanız, sadece hareket ederken animasyon çalışır
@@ -90,12 +99,16 @@ public class PlayerController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 next = rb.position + input * moveSpeed * Time.fixedDeltaTime;
+        // Sprint durumuna göre hızı ayarla
+        float currentSpeed = moveSpeed * (isSprinting ? sprintMultiplier : 1f);
+        Vector2 next = rb.position + input * currentSpeed * Time.fixedDeltaTime;
         rb.MovePosition(next);
     }
     
     
     // Public getter for other scripts
     public bool IsMoving => isMoving;
+    public bool IsRunning => isRunning;
+    public bool IsSprinting => isSprinting;
     public bool FacingRight => facingRight;
 }
