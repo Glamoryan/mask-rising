@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 8144208078501910610}
   - component: {fileID: 1631032706654967129}
   - component: {fileID: -3954196553553906778}
+  - component: {fileID: -6932710449602687022}
   m_Layer: 0
   m_Name: EnemyHuman
   m_TagString: Untagged
@@ -216,3 +217,21 @@ MonoBehaviour:
   attackDamage: 4
   showDebugGizmos: 1
   logStateChanges: 0
+--- !u!114 &-6932710449602687022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875483803345296655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98619145a66d4130895af1efb2a8e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
+  currentHealth: 0
+  invincibilityDuration: 0.2
+  showDamageDebug: 0
+  despawnDelay: 2
+  dropLoot: 0
