@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 93129529079db724bbee68a98258918b
+guid: 1ca40308b403642e49d6a4b8f589283e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8688432534854315967
-    second: WoodenTiles_0
-  - first:
-      213: -2430631366192073954
-    second: WoodenTiles_1
-  - first:
-      213: -3979453099384518347
-    second: WoodenTiles_2
-  - first:
-      213: 48691766051508053
-    second: WoodenTiles_3
-  - first:
-      213: 3292212871267286836
-    second: WoodenTiles_4
+      213: 3056539736353057000
+    second: WoodenTilesV2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,128 +96,115 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WoodenTiles_0
+      name: WoodenTilesV2_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 79
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 140df0194ac7c6780800000000000000
-      internalID: -8688432534854315967
+      spriteID: 2e4801ec11a8b4123be73b3399a2ca55
+      internalID: -1816068299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodenTiles_1
+      name: WoodenTilesV2_1
       rect:
         serializedVersion: 2
-        x: 79
-        y: 87
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e13f23686a9a44ed0800000000000000
-      internalID: -2430631366192073954
+      spriteID: 17081ac4732af48609770776463db48b
+      internalID: 1503513998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodenTiles_2
+      name: WoodenTilesV2_2
       rect:
         serializedVersion: 2
-        x: 127
-        y: 79
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 539cbda7d7426c8c0800000000000000
-      internalID: -3979453099384518347
+      spriteID: 3ef14a48aaf9c4cb6be3b112026591a5
+      internalID: -2112807085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodenTiles_3
+      name: WoodenTilesV2_3
       rect:
         serializedVersion: 2
-        x: 175
-        y: 79
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 55f8cfa37ecfca000800000000000000
-      internalID: 48691766051508053
+      spriteID: f06cceaf7abaf4b3a93876257a2a5e65
+      internalID: 1440004881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodenTiles_4
+      name: WoodenTilesV2_4
       rect:
         serializedVersion: 2
-        x: 31
-        y: 35
-        width: 26
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 43ffadcd92a40bd20800000000000000
-      internalID: 3292212871267286836
+      spriteID: 4c4bba0bde1fd4898b43abc9cc20764c
+      internalID: 393807637
       vertices: []
       indices: 
       edges: []
@@ -238,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5d61cd9632ef04f41be901a5ba4ddd7d
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +223,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WoodenTiles_0: -8688432534854315967
-      WoodenTiles_1: -2430631366192073954
-      WoodenTiles_2: -3979453099384518347
-      WoodenTiles_3: 48691766051508053
-      WoodenTiles_4: 3292212871267286836
+      WoodenTilesV2_0: -1816068299
+      WoodenTilesV2_1: 1503513998
+      WoodenTilesV2_2: -2112807085
+      WoodenTilesV2_3: 1440004881
+      WoodenTilesV2_4: 393807637
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
