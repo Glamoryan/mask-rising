@@ -11611,6 +11611,11 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 3
   m_CellSwizzle: 0
+--- !u!1 &351765739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5841158849766148112, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
+  m_PrefabInstance: {fileID: 1279123150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &393964831
 GameObject:
   m_ObjectHideFlags: 0
@@ -12663,7 +12668,10 @@ PrefabInstance:
     - {fileID: 8073700428697172889, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5841158849766148112, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1279123157}
   m_SourcePrefab: {fileID: 100100000, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
 --- !u!4 &1279123151 stripped
 Transform:
@@ -12675,12 +12683,60 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1007804005181953659, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
   m_PrefabInstance: {fileID: 1279123150}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 351765739}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f55da8cf2fcb4e8c9d47715e45c9140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1279123157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351765739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae769478f7ea249c29718a2f7363a06c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundTilemap: {fileID: 0}
+  enableHopEffect: 1
+  hopHeight: 0.3
+  hopDuration: 0.2
+  hopCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  enableWindEffect: 1
+  windEffectPrefab: {fileID: 3589965061420428704, guid: 47cd15a380e284b3aa981678c887ef20, type: 3}
+  windEffectDuration: 0.5
+  tileLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  checkInterval: 0.1
+  showDebugInfo: 1
 --- !u!1 &1340315734
 GameObject:
   m_ObjectHideFlags: 0
