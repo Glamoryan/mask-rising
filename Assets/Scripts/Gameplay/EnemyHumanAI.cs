@@ -397,13 +397,24 @@ public class EnemyHumanAI : MonoBehaviour
     {
         lastAttackTime = Time.time;
         
-        // TODO: Implement actual damage system
-        // For now, just log
-        Debug.Log($"[{name}] Attacked target for {attackDamage} damage");
+        if (!target) return;
+        
+        // Try to get PlayerHealth component
+        var playerHealth = target.GetComponent<PlayerHealth>();
+        if (playerHealth)
+        {
+            playerHealth.TakeDamage(attackDamage, gameObject);
+            
+            if (logStateChanges)
+                Debug.Log($"[{name}] Dealt {attackDamage} damage to player");
+        }
+        else
+        {
+            Debug.LogWarning($"[{name}] Target has no PlayerHealth component!", this);
+        }
         
         // TODO: Add animation trigger
         // TODO: Add attack sound
-        // TODO: Apply damage to player
     }
     
     #endregion
