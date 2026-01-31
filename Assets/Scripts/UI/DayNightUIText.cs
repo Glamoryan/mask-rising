@@ -6,52 +6,24 @@ public class DayNightUIText : MonoBehaviour
     [SerializeField] private DayNightCycle cycle;
     [SerializeField] private TMP_Text label;
 
+    [Header("Colors")]
+    [SerializeField] private Color dayTextColor = new Color(1f, 0.9f, 0.6f);
+    [SerializeField] private Color nightTextColor = new Color(0.6f, 0.8f, 1f);
+
     private void Awake()
     {
         if (!label) label = GetComponent<TMP_Text>();
         if (!cycle) cycle = FindFirstObjectByType<DayNightCycle>();
     }
 
-    private void OnEnable()
+    private void Update()
     {
-        if (!cycle) return;
-        cycle.OnDayStart += HandleDayStart;
-        cycle.OnNightStart += HandleNightStart;
-    }
+        if (!cycle || !label) return;
 
-    private void OnDisable()
-    {
-        if (!cycle) return;
-        cycle.OnDayStart -= HandleDayStart;
-        cycle.OnNightStart -= HandleNightStart;
-    }
-
-    private void Start()
-    {
-        UpdateText(cycle.Phase);
-    }
-
-    private void HandleDayStart(int _day)
-    {
-        UpdateText(DayPhase.Day);
-    }
-
-    private void HandleNightStart(int _day)
-    {
-        UpdateText(DayPhase.Night);
-    }
-
-    private void UpdateText(DayPhase phase)
-    {
-        if (phase == DayPhase.Day)
-        {
-            label.text = "DAY";
-            label.color = new Color(1f, 0.9f, 0.6f); // warm
-        }
-        else
-        {
-            label.text = "NIGHT";
-            label.color = new Color(0.6f, 0.8f, 1f); // cold
-        }
+        // Update time display
+        label.text = cycle.CurrentTimeString;
+        
+        // Update color based on phase
+        label.color = (cycle.Phase == DayPhase.Day) ? dayTextColor : nightTextColor;
     }
 }
