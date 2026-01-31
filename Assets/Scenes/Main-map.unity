@@ -12599,6 +12599,10 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4148387602567990295, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
+      propertyPath: facingRight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6150954111641319118, guid: 8e7d49db772d94a29b1d04637aab53e5, type: 3}
       propertyPath: attackRange
       value: 1
